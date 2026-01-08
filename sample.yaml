@@ -1,0 +1,7 @@
+---
+- name: Test Playbook
+  hosts: 192.168.100.112
+  tasks:
+    - name: Print a message
+      debug:
+        msg: "Hello, World!"
