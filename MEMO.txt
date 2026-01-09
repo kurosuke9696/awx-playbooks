@@ -1,0 +1,5 @@
+VENVに入るとき
+1) debian を開く
+2) source ~/.local/venv/bin/activate
+→「(venv)」がプロンプトに付与される
+3) VSCodeはここで、「code .」

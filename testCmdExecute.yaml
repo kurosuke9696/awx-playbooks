@@ -1,0 +1,11 @@
+---
+- name: Test Execute Command
+  hosts: 192.168.100.112
+  tasks:
+    - name: Execute a command
+      command: pacman -Qs
+      register: command_output
+
+    - name: Print command output
+      debug:
+        var: command_output.stdout

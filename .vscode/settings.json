@@ -1,0 +1,4 @@
+{
+    "ansible.ansible.reuseTerminal": true,
+    "ansible.python.interpreterPath": "/home/ina/.local/venv/bin/python3"
+}
