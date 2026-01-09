@@ -3,3 +3,21 @@ VENVに入るとき
 2) source ~/.local/venv/bin/activate
 →「(venv)」がプロンプトに付与される
 3) VSCodeはここで、「code .」
+
+
+AWXを立ち上げる時
+ansibleのVMを起動する
+inaでログイン
+minikube start
+kubectl get pods -n awx
+（下の様になること）
+NAME                                               READY   STATUS      RESTARTS       AGE
+awx-migration-24.6.1-nm66t                         0/1     Completed   0              2d6h
+awx-operator-controller-manager-6686bb5899-bn6cg   2/2     Running     8 (23h ago)    2d6h
+awx-postgres-15-0                                  1/1     Running     4 (23h ago)    2d6h
+awx-task-6bb77b8467-hfv9b                          4/4     Running     16 (23h ago)   2d6h
+awx-web-54cd7556fd-hz2gp                           3/3     Running     12 (23h ago)   2d6h
+
+ここで、chromeから、「http://192.168.100.111:30395」でアクセス
+エラーになったら、iptablesが有効になっていないので、
+systemctl start iptables
